@@ -1,0 +1,542 @@
+Index: Gestion_de_errores/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Gestion_de_errores/Main.java b/Gestion_de_errores/Main.java
+new file mode 100644
+--- /dev/null	(date 1668130775300)
++++ b/Gestion_de_errores/Main.java	(date 1668130775300)
+@@ -0,0 +1,11 @@
++
++
++public class Main {
++    static public void main (String[]args){
++        int suma = 0;
++
++        suma = suma + 30;
++        System.out.println(suma);
++
++    }
++}
+Index: Persona/Automovil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Persona/Automovil.java b/Persona/Automovil.java
+new file mode 100644
+--- /dev/null	(date 1668465676741)
++++ b/Persona/Automovil.java	(date 1668465676741)
+@@ -0,0 +1,59 @@
++public class Automovil {
++
++    public static void main (String [] args){
++        Auto carro = new Auto ();
++        carro.setMarca ("Chevrolet");
++        System.out.println ("la marca de este auto es:" +carro.getMarca ());
++        carro.setModelo ("All New Terrotory");
++        System.out.println ("es un modelo " +carro.getModelo ());
++        carro.setNumeroPuertas (6);
++        System.out.println ( "puertas" +carro.getNumeropuertas ());
++        carro.setYear (2023);
++        System.out.println (carro.getYear ());
++        carro.setPrecio (220000000);
++        System.out.println ("Es su valor" +carro.getPrecio ());
++    }
++
++
++}
++
++
++class  Auto {
++
++    private static String marca;
++    private static String modelo;
++    private int numeropuertas;
++    private int year;
++    private int precio;
++
++    public void setMarca (String marca){
++        Auto.marca = marca;
++    }
++        public  String getMarca(){
++         return marca;
++        }
++    public void setModelo (String modelo){
++        Auto.modelo = modelo;
++    }
++        public String getModelo (){
++         return modelo;
++        }
++    public void setNumeroPuertas(int numeropuertas){
++         this.numeropuertas = numeropuertas;
++    }
++         public int getNumeropuertas () {
++          return numeropuertas;
++        }
++    public void setYear (int year){
++        this.year = year;
++    }
++        public int getYear(){
++        return year;
++        }
++    public void setPrecio (int precio){
++        this.precio = precio;
++    }
++        public int getPrecio(){
++         return precio;
++        }
++}
+\ No newline at end of file
+Index: Project1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/Estructura_de_control\" isTestSource=\"false\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/Estructuras_de_control\" isTestSource=\"false\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Project1.iml b/Project1.iml
+--- a/Project1.iml	(revision 7887f7986ed6226471eabe48ec23d21ced6a5759)
++++ b/Project1.iml	(date 1668425438275)
+@@ -6,6 +6,9 @@
+       <sourceFolder url="file://$MODULE_DIR$/Estructura_de_control" isTestSource="false" />
+       <sourceFolder url="file://$MODULE_DIR$/Estructuras_de_control" isTestSource="false" />
+       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/Gestion_de_errores" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/Encapsulacion" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/Persona" isTestSource="false" />
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+Index: Encapsulacion/Clases3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Encapsulacion/Clases3.java b/Encapsulacion/Clases3.java
+new file mode 100644
+--- /dev/null	(date 1668294226584)
++++ b/Encapsulacion/Clases3.java	(date 1668294226584)
+@@ -0,0 +1,39 @@
++
++public class Clases3{
++
++    public static void main (String [] args){
++        Vehiculo coche = new Vehiculo();
++        coche.setTipo ("Coupe");
++        coche.setVelocidadMaxima (120);
++
++        Vehiculo moto = new Vehiculo();
++        moto.setTipo ("Scooter");
++        moto.setVelocidadMaxima (50);
++
++            System.out.println(coche.getTipo());
++            System.out.println(coche.getVelocidadMaxima());
++            System.out.println(moto.getTipo() + " " + moto.getVelocidadMaxima());
++
++    }
++}
++
++class Vehiculo {
++    private String tipo;
++    private int velocidadMaxima;
++    private int estado;
++
++    public void setVelocidadMaxima (int velocidadMaxima){
++        this.velocidadMaxima = velocidadMaxima;
++     }
++        public int getVelocidadMaxima(){
++        return this.velocidadMaxima;
++        }
++                 public void setTipo (String tipo){
++                    if (this.estado == 0 ) {
++                     this.tipo = tipo;
++        }
++     }
++                public String getTipo (){
++                    return this.tipo;
++    }
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" default=\"true\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 7887f7986ed6226471eabe48ec23d21ced6a5759)
++++ b/.idea/misc.xml	(date 1668462743472)
+@@ -1,5 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="EntryPointsManager">
++    <entry_points version="2.0">
++      <entry_point TYPE="field" FQNAME="Auto modelo" />
++    </entry_points>
++  </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"ef28a747-fdf8-427e-a9e1-29317433c33f\" name=\"Changes\" comment=\"mi 2do commit\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Estructuras_de_control/Ciclo_Mientras.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Estructuras_de_control/Ciclo_Para.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Estructuras_de_control/Haga_Mientras.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Estructuras_de_control/Selector_Multiple.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Estructuras_de_control/Si_sino.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/README.md\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Project1.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Project1.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/coche.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/coche.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"package-info\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\r\n      <list>\r\n        <option value=\"select &lt;elyshd@gmail.com&gt;\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"d409b427-8dd1-4bf4-b0b1-7eb2398c205e\" />\r\n        <option name=\"url\" value=\"https://github.com/sselect/Project1.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2H7L1MDtABb9I6UuU8CaOsfcY7A\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"flattenPackages\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"jdk.selected.JAVA_MODULE\": \"19\",\r\n    \"last_opened_file_path\": \"C:/dev/Project1/Estructura_de_control\",\r\n    \"project.structure.last.edited\": \"Global Libraries\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"run.code.analysis.last.selected.profile\": \"pProject Default\",\r\n    \"settings.editor.selected.configurable\": \"configurable.group.editor\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\dev\\Project1\\Estructura_de_control\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Ciclo_Mientras\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Ciclo_Mientras\" />\r\n      <module name=\"Project1\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Ejercicio1\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Ejercicio1\" />\r\n      <module name=\"Project1\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"coche\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"coche\" />\r\n      <module name=\"Project1\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main\" />\r\n      <module name=\"Project1\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Ciclo_Mientras\" />\r\n        <item itemvalue=\"Application.main\" />\r\n        <item itemvalue=\"Application.coche\" />\r\n        <item itemvalue=\"Application.Ejercicio1\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"ef28a747-fdf8-427e-a9e1-29317433c33f\" name=\"Changes\" comment=\"\" />\r\n      <created>1667630960042</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1667630960042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"mi 2do commit\">\r\n      <created>1667797174327</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667797174327</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"mi 2do commit\">\r\n      <created>1667797548439</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667797548439</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"mi 2do commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"mi 2do commit\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/Project1$Ejercicio1.ic\" NAME=\"Ejercicio1 Coverage Results\" MODIFIED=\"1667791631204\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7887f7986ed6226471eabe48ec23d21ced6a5759)
++++ b/.idea/workspace.xml	(date 1668475291324)
+@@ -4,18 +4,16 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ef28a747-fdf8-427e-a9e1-29317433c33f" name="Changes" comment="mi 2do commit">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Estructuras_de_control/Ciclo_Mientras.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Estructuras_de_control/Ciclo_Para.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Estructuras_de_control/Haga_Mientras.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Estructuras_de_control/Selector_Multiple.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Estructuras_de_control/Si_sino.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
++    <list default="true" id="ef28a747-fdf8-427e-a9e1-29317433c33f" name="Changes" comment="mi 3er commit">
++      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Encapsulacion/Clases3.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Gestion_de_errores/Contador.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Gestion_de_errores/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Gestion_de_errores/Objeto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Persona/Ejercicio8.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Project1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project1.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/coche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coche.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -35,9 +33,13 @@
+       <list>
+         <option value="select &lt;elyshd@gmail.com&gt;" />
+       </list>
++    </option>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+@@ -60,35 +62,60 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "jdk.selected.JAVA_MODULE": "19",
+-    "last_opened_file_path": "C:/dev/Project1/Estructura_de_control",
+-    "project.structure.last.edited": "Global Libraries",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.2",
+-    "run.code.analysis.last.selected.profile": "pProject Default",
+-    "settings.editor.selected.configurable": "configurable.group.editor"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/dev/Project1/Estructura_de_control&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\dev\Project1\Estructura_de_control" />
+     </key>
+   </component>
+   <component name="RunManager">
+-    <configuration name="Ciclo_Mientras" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Ciclo_Mientras" />
++    <configuration name="Objeto (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Objeto" />
+       <module name="Project1" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Ejercicio1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Ejercicio1" />
++    <configuration name="Objeto" type="Application" factoryName="Application" nameIsGenerated="true">
++      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Users/jdk/jdk-19.0.1" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
++      <option name="MAIN_CLASS_NAME" value="Objeto" />
++      <module name="Project1" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Objeto" type="Application" factoryName="Application" nameIsGenerated="true">
++      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Users/jdk/jdk-19.0.1" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
++      <option name="MAIN_CLASS_NAME" value="Objeto" />
++      <module name="Project1" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Selector_Multiple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Selector_Multiple" />
++      <module name="Project1" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Si_sino" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Si_sino" />
+       <module name="Project1" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -110,10 +137,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Ciclo_Mientras" />
+-        <item itemvalue="Application.main" />
++        <item itemvalue="Application.Si_sino" />
++        <item itemvalue="Application.Selector_Multiple" />
++        <item itemvalue="Application.Objeto (1)" />
++        <item itemvalue="Application.Objeto" />
+         <item itemvalue="Application.coche" />
+-        <item itemvalue="Application.Ejercicio1" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -140,7 +168,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1667797548439</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="mi 3er commit">
++      <created>1668051020136</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1668051020136</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -154,7 +189,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="origin/main" />
++                        <option value="main" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -168,13 +203,28 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="mi 2do commit" />
+-    <option name="LAST_COMMIT_MESSAGE" value="mi 2do commit" />
++    <MESSAGE value="mi 3er commit" />
++    <option name="LAST_COMMIT_MESSAGE" value="mi 3er commit" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/Gestion_de_errores/Main.java</url>
++          <line>7</line>
++          <option name="timeStamp" value="10" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+     <select />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/Project1$Objeto__1_.ic" NAME="Objeto (1) Coverage Results" MODIFIED="1668202387117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
++    <SUITE FILE_PATH="coverage/Project1$Objeto.ic" NAME="Objeto Coverage Results" MODIFIED="1668195575313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+     <SUITE FILE_PATH="coverage/Project1$Ejercicio1.ic" NAME="Ejercicio1 Coverage Results" MODIFIED="1667791631204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
++    <SUITE FILE_PATH="coverage/Project1$Objeto__2_.ic" NAME="Objeto (2) Coverage Results" MODIFIED="1668202409527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: Persona/Ejercicio8.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Persona/Ejercicio8.java b/Persona/Ejercicio8.java
+new file mode 100644
+--- /dev/null	(date 1668474995111)
++++ b/Persona/Ejercicio8.java	(date 1668474995111)
+@@ -0,0 +1,43 @@
++
++public  class Ejercicio8 {
++
++    public static void main (String[] args){
++
++            Persona persona = new Persona ();
++            persona.setNombre ("Raul");
++            System.out.println ("El nomnbre es .. " + persona.getNombre () );
++            persona.setEdad (34);
++            System.out.println ("tengo :" + persona.getEdad ()  + "de edad") ;
++            persona.setTelefono (920289601);
++            System.out.println ("Mi telefono es:" + persona.getTelefono ());
++
++    }
++}
++
++
++ class Persona {
++
++    private static String nombre;
++    private int edad;
++    private int telefono;
++
++     public void setNombre ( String nombre){
++         Persona.nombre = nombre;
++     }
++     public String getNombre (){
++         return  nombre;
++     }
++     public void setEdad (int edad){
++         this.edad = edad;
++     }
++     public int getEdad(){
++         return edad =edad;
++     }
++    public void setTelefono (int telefono){
++         this.telefono = telefono;
++     }
++     public int getTelefono(){
++         return telefono ;
++     }
++}
++
+Index: Gestion_de_errores/Objeto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Gestion_de_errores/Objeto.java b/Gestion_de_errores/Objeto.java
+new file mode 100644
+--- /dev/null	(date 1668227566110)
++++ b/Gestion_de_errores/Objeto.java	(date 1668227566110)
+@@ -0,0 +1,47 @@
++
++package Gestion_de_errores;
++
++public class Objeto {
++   public static void main(String[] args){
++       Coche coche = new Coche();
++       System.out.println(coche.numeroDePuertas);
++      // coche.acelerar();
++       System.out.println(coche.velocidadMaxima);
++       System.out.println(coche.velcocidadActual);
++
++       Coche coche2 = new Coche(2,90);
++       System.out.println(coche2.numeroDePuertas);
++       // coche.acelerar();
++       System.out.println(coche2.velocidadMaxima);
++       System.out.println(coche2.velcocidadActual);
++}
++}
++//** Estas son las propiedades **//
++class Coche {
++       int numeroDePuertas;
++       int velocidadMaxima;
++         float velcocidadActual;
++
++       //** esto es un constructor**//
++          public Coche(int puertas, int velocidad) {
++                numeroDePuertas = puertas;
++                velocidadMaxima = velocidad;
++              System.out.println("Estoy en el constructor, con parametros");
++          }
++           public Coche() {
++               numeroDePuertas = 5;
++               velocidadMaxima = 120;
++              System.out.println("Estoy en el constructor, sin parametros");
++    }
++
++
++
++    //** estos son los metodos **//
++        public void  acelerar(){
++            velocidadMaxima += 30;
++        }
++        public void decelerar(){
++
++        }
++
++}
+Index: Gestion_de_errores/Contador.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Gestion_de_errores/Contador.java b/Gestion_de_errores/Contador.java
+new file mode 100644
+--- /dev/null	(date 1668129594821)
++++ b/Gestion_de_errores/Contador.java	(date 1668129594821)
+@@ -0,0 +1,23 @@
++public class Contador {
++     static public void main (String[] args) {
++         int numeros[] [] = {
++                 {10, 20, 30, 40, 50},
++                 {10, 20, 30, 40, 50}
++         };
++
++         //** i = index o indice **//
++
++         //** Este bucle for, recorremos el Array bidimensional numeros, y por cada  **//
++         //** SubArray del mismo mostramos el valor que tiene en ese momento**//
++
++         for (int i = 2; i < numeros.length; i++) {
++             for (int j = 2; j < numeros[j].length; j++ )
++             {
++                 System.out.println(numeros[j]);
++             }
++
++         }
++
++     }
++
++}
+Index: .idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/codeStyles/codeStyleConfig.xml b/.idea/codeStyles/codeStyleConfig.xml
+new file mode 100644
+--- /dev/null	(date 1668313029045)
++++ b/.idea/codeStyles/codeStyleConfig.xml	(date 1668313029045)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
++  </state>
++</component>
+\ No newline at end of file

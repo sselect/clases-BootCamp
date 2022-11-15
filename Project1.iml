@@ -6,6 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Estructura_de_control" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Estructuras_de_control" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gestion_de_errores" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Encapsulacion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Persona" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
